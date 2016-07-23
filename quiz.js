@@ -14,6 +14,7 @@ function tree(height) {
     spaceNumbers -=1
     addCounter += 2
     div.innerHTML += line + "<br>";
+    console.log(line);
 
     }
 
