@@ -1,14 +1,14 @@
 document.getElementById('button').addEventListener('click',createCharacters);
-// document.getElementById('myHeight').addEventListener('keypress',function (e) {
-//     while (keyCode === 13) {
-//       createCharacters();
-//     }
-// });
-// document.getElementById('characterOfTree').addEventListener('keypress',function (e) {
-//     while (keyCode === 13) {
-//       createCharacters();
-//     }
-// });
+document.getElementById('myHeight').addEventListener('keypress',function (e) {
+    if (e.keyCode === 13) {
+      createCharacters();
+    }
+});
+document.getElementById('myCharacter').addEventListener('keypress',function (e) {
+    if (e.keyCode === 13) {
+      createCharacters();
+    }
+});
 
 var div = document.getElementById('placeForTree');
 var obj = {}
@@ -28,8 +28,8 @@ function tree(obj) {
     console.log('Loops are starting')
   if ( obj.height < 0)
     alert('You need to enter an amount above 0!');
-  if (obj.height =="")
-      alert("You left the enter field empty. Please enter in a height and character.");
+  if (obj.height ==""|| obj.character==="")
+      alert("You left an input field empty. Please enter in a height and character.");
 
   else if (obj.height > 0) {
   for (i = 0; i< obj.height; i ++) {
